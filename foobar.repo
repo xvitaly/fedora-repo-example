@@ -1,0 +1,21 @@
+[foobar]
+name=FooBar $releasever - $basearch
+baseurl=https://downloads.example.org/fedora/$releasever/$basearch/
+enabled=1
+metadata_expire=12h
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-foobar-$releasever
+skip_if_unavailable=True
+
+[foobar-source]
+name=FooBar $releasever - Source
+baseurl=https://downloads.example.org/fedora/$releasever/SRPMS/
+enabled=0
+metadata_expire=12h
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-foobar-$releasever
+skip_if_unavailable=True
