@@ -1,4 +1,7 @@
-Name: foobar-release
+# TODO: set repository name here.
+%global reponame foobar
+
+Name: %{reponame}-release
 Version: 32
 Release: 1%{?dist}
 
@@ -7,11 +10,11 @@ License: MIT
 URL: https://example.org/
 BuildArch: noarch
 
-Source1: foobar.repo
-Source2: RPM-GPG-KEY-foobar-32
+Source1: %{reponame}.repo
+Source2: RPM-GPG-KEY-%{reponame}-32
 
 Requires: system-release(%{version})
-Provides: foobar-repos(%{version})
+Provides: %{reponame}-repos(%{version})
 
 %description
 FooBar package repository files for yum and dnf along with gpg
